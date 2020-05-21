@@ -1,9 +1,20 @@
-<h1>Fancy cocktails</h1>
+<div class="container_cocktail">
+  <div class="cocktail_banner">
+    <i class="far fa-cocktail"></i>
+    <h1 class="title_index" >Fancy cocktails</h1>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col mb-4">
+          <div class="card" style="width: 21rem;">
+            <img src="https://source.unsplash.com/random" class="card-img-top img-fluid img-thumbnail" alt="cocktail">
+            <div class="card-body">
+              <h5 class="card-title text-decoration-none text-info"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
-
- <%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-primary pad20" %>
+  <%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-primary pad20" %>
+</div>
