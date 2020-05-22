@@ -5,18 +5,20 @@
         <%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-light pad20" %>
     </div>
   </div>
-  <div class="cocktails_list">
-    <div class="row row-cols-1 row-cols-md-3">
+
+  <div>
+    <div class="row">
       <% @cocktails.each do |cocktail| %>
-        <div class="col mb-4">
-            <div class="card" style="width: 21rem;">
-              <div class="card-body">
-                <%= image_tag cocktail.url, width: 300, height: 225, crop: :fill %>
-                <h5 class="card-title text-decoration-none text-info"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-                <%= link_to "Delete", cocktail_path(cocktail), class: "btn btn-danger btn-xs", method: :delete  %>
-              </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <%= image_tag cocktail.url, width: 300, height: 225, crop: :fill %>
+              <br> <br>
+              <h5 class="card-title text-decoration-none text-info font-weight-bold"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+              <%= link_to "Delete", cocktail_path(cocktail), class: "btn btn-outline-dark delete_button", method: :delete  %>
             </div>
           </div>
+        </div>
       <% end %>
     </div>
   </div>

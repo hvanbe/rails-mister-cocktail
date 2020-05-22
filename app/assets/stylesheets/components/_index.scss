@@ -5,7 +5,6 @@
 
 .container_cocktail {
   background-color: #f9f7f5;
-  padding: 20px;
 }
 
 .cocktail_banner {
@@ -35,7 +34,33 @@
 
 .card {
   border: #f2f1f0 solid 6px;
-  width: 30%;
-  padding: 50px 15px;
 }
 
+.cocktails_list {
+  padding: 20px 10px 20px 10px;
+}
+
+.button_submit {
+  position: absolute;
+  right: 340px;
+  bottom: 630px;
+  width: 230px;
+}
+
+.button_back {
+  position: absolute;
+  right: 340px;
+  bottom: 590px;
+  width: 230px;
+}
+
+.list_ingredient{
+  text-decoration: none;
+}
+
+.delete_button {
+  font-size: 50%;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
