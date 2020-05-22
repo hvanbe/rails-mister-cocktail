@@ -4,5 +4,38 @@
 @import "navbar";
 
 .container_cocktail {
-  background-color: red;
+  background-color: #f9f7f5;
+  padding: 20px;
 }
+
+.cocktail_banner {
+  background-color: #ad9860;
+  width: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+    .title_index {
+      color: white;
+      font-family: 'Cinzel', serif;
+    }
+}
+
+.row {
+  padding-top: 20px;
+  text-align: center;
+  padding-left: 150px;
+}
+
+.button_add {
+  position: absolute;
+  right: -10px;
+  bottom: 750px;
+  width: 230px;
+}
+
+.card {
+  border: #f2f1f0 solid 6px;
+  width: 30%;
+  padding: 50px 15px;
+}
+

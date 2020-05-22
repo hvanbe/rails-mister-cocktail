@@ -1,20 +1,23 @@
 <div class="container_cocktail">
   <div class="cocktail_banner">
-    <i class="far fa-cocktail"></i>
-    <h1 class="title_index" >Fancy cocktails</h1>
+    <h1 class="title_index">THE ALCHEMIST</h1>
+    <div class="button_add">
+        <%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-light pad20" %>
+    </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-3">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col mb-4">
-          <div class="card" style="width: 21rem;">
-            <img src="https://source.unsplash.com/random" class="card-img-top img-fluid img-thumbnail" alt="cocktail">
-            <div class="card-body">
-              <h5 class="card-title text-decoration-none text-info"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+  <div class="cocktails_list">
+    <div class="row row-cols-1 row-cols-md-3">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col mb-4">
+            <div class="card" style="width: 21rem;">
+              <div class="card-body">
+                <%= image_tag cocktail.url, width: 300, height: 225, crop: :fill %>
+                <h5 class="card-title text-decoration-none text-info"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+                <%= link_to "Delete", cocktail_path(cocktail), class: "btn btn-danger btn-xs", method: :delete  %>
+              </div>
             </div>
           </div>
-        </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-
-  <%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-primary pad20" %>
 </div>
